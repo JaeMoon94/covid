@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@300;500;900&display=swap');
+*
+{
+    background-color: black !important;
+    color: red;
+    font-family: 'Alegreya Sans SC', sans-serif;
+}
+
+/* Remove the navbar's default margin-bottom and rounded borders */ 
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+  }
+  
+  /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+  .row.content {height: 100%}
+  
+  /* Set gray background color and 100% height */
+  .sidenav {
+    padding-top: 20px;
+    background-color: black;
+    color: red;
+    height: 100%;
+  }
+  
+  /* Set black background color, white text and some padding */
+  footer {
+    background-color:chartreuse;    
+    color: white;
+    padding: 15px;
+    position:fixed;
+    bottom: 0;
+    width: 100%;
+    margin-top: 10px;
+  }
+  footer
+  {
+    background-color:chartreuse !important; 
+  }
+  a.footerP
+  {
+    color: Black;
+    background-color:chartreuse !important; 
+  }
+
+  img.covid
+  {
+      width: 150px;
+  }
+  h1.title
+  {
+      text-align: center;
+  }
+  div.flexbox
+  {
+      display: flex;
+  }
+  p.discription
+  {
+      font-size: 20px;
+  }
+
+  h3.insturction
+  {
+      text-align: center;
+  }
+  .inputs
+  {
+      text-align: center;
+  }
+
+  p.warning
+  {
+        background-color: black;
+        color: greenyellow;
+        font-size: 40px;
+        font-weight: bold;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        animation: move 10s linear infinite;
+  }
+
+  p.moreInfo
+  {
+    border: white solid 1px;
+    padding: 20px;
+    font-size: 30px;
+  }
+
+  a
+  {
+    font-size: 20px;
+  }
+
+  div.well
+  {
+    font-size: 30px;
+  }
+  div.worldData
+  {
+    font-size: 17px;
+  }
+
+  div.country-case
+
+  {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 30px;
+  }
+  /* On small screens, set height to 'auto' for sidenav and grid */
+  @media screen and (max-width: 767px) {
+    .sidenav {
+      height: auto;
+      padding: 15px;
+    }
+    .row.content {height:auto;} 
+    img.covid{
+        width: 200px;
+    }
+
+    p.moreInfo
+    {
+      font-size: 20px!important;
+    }
+    div.well
+    {
+      font-size: 20px!important;
+    }
+  }
+
+  @keyframes move{
+    0%{
+    color: red;
+      transform: translateX(-500px);
+    }
+    25%  {color: yellow;}
+    50%  {color: yellowgreen;}
+    100%{
+      transform: translateX(100vw);
+      color: skyblue;
+    }
+  }
+
+  @media screen and (max-width: 1320px)
+  {
+    p.moreInfo
+    {
+      font-size: 20px;
+    }
+    div.well
+    {
+      font-size: 20px;
+    }
+  }
+
+  @media screen and (max-width: 1070px)
+  {
+    p.moreInfo
+    {
+      font-size: 12px;
+    }
+    div.well
+    {
+      font-size: 12px;
+    }
+  }
+

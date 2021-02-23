@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>
+        Hello 
+    </h1>
+
+    <script>
+        // const userAction = async () => {
+        //     const response = await fetch('https://covid-api.mmediagroup.fr/v1//cases?country=France');
+        //     const myJson = await response.json(); //extract JSON from the http response   // do something with myJson 
+        //     console.log(myJson);
+        // }
+        // const url = "https://covid-api.mmediagroup.fr/v1/cases?country=France";
+        // fetch(url)
+        //     .then(function (response) {
+        //         return response.json();
+        //     }).then(function (json) {
+        //         console.log(json);
+        //     });
+
+        // fetch('https://covid-api.mmediagroup.fr/v1/cases')
+        //     .then(response => {
+        //         return response.json();
+        //     })
+        //     .then(users => {
+        //         console.log(users);
+        //     });
+        const url = "https://covid-api.mmediagroup.fr/v1/cases";
+        
+        fetch(url)
+            .then(function (response) {
+                return response.json();
+            }).then(function (json) {
+                console.log(json);
+            });
+
+        // https://ghibliapi.herokuapp.com
+
+
+        // fetch('https://ghibliapi.herokuapp.com/vehicles')
+        //     .then(response => {
+        //         return response.json();
+        //     })
+        //     .then(users => {
+        //         console.log(users);
+        //     });
+
+
+    //     for(Object in temp1)
+    // console.log(Object)
+
+    </script>
+
+</body>
+
+</html>

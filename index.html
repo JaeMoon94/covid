@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+
+    <div class=""><p class="warning">!!! CoronaVirus(COVID-19) Quarantine Area !!!</p></div>
+
+
+
+    <div class="container-fluid text-center">
+        <div class="row content">
+            <div class="col-sm-2 sidenav">
+                <p class="moreInfo">For more information</p>
+                <p><a href="https://www.google.com/search?q=coronavirus&rlz=1C5CHFA_enUS810US810&oq=coronavirus&aqs=chrome.0.69i59j35i19i39j69i59l2j69i60l4.4421j0j7&sourceid=chrome&ie=UTF-8" target="_blank" >Google result</a></p>
+                <p><a href="https://www.who.int/" target="_blank">World Health Origanization</a></p>
+                <p><a href="https://www.cdc.gov/" target="_blank">Centers for Disease Control</a></p>
+            </div>
+            <div class="col-sm-8 text-left">
+                <h1 class="title">Coronavirus</h1>
+
+                <div class="flexbox">
+                    <div>
+                        <p class="discription">Coronaviruses are a group of related RNA viruses that cause diseases in
+                            mammals and birds. In humans and birds, they cause respiratory tract infections that can
+                            range
+                            from mild to lethal. Mild illnesses in humans include some cases of the common cold (which
+                            is
+                            also caused by other viruses, predominantly rhinoviruses), while more lethal varieties can
+                            cause
+                            SARS, MERS, and COVID-19. In cows and pigs they cause diarrhea, while in mice they cause
+                            hepatitis and encephalomyelitis.</p>
+                    </div>
+                    <div>
+                        <img class="covid" src="corona.png" alt="">
+                    </div>
+                </div>
+                <hr>
+                <h3 class="insturction">Type Country</h3>
+                <div class="inputs">
+                    <input class="textinput" id="countryInput" type="text"></input>
+                    <input class="submitButton" id="countrySubmit" type="submit" value="Search">
+                </div>
+
+                <div class="country-case" id="countryData">
+                    
+                </div>
+            </div>
+            <div class="col-sm-2 sidenav">
+                <div class="well">
+                    <p>World Wide Case</p>
+                </div>
+
+                <div class="world-case">
+                    <!-- <p id="worldWideData">World Wide Case2</p> -->
+                    <div class="worldData" id="worldWideData"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="container-fluid text-center">
+        <a class="footerP" href="" target="_blank">Github Repository</a>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"
+        integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+    <script text="type/javascript" src="script.js">
+    </script>
+
+</body>
+
+</html>
