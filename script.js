@@ -25,6 +25,9 @@ fetch(url)
         document.getElementById("worldWideData").innerHTML = globalResult;
     });
 
+//second end point for historical data////
+
+
 const countryHistoryUrl = "https://covid-api.mmediagroup.fr/v1/history?country=Global&status=deaths"; 
 
 fetch(countryHistoryUrl)
