@@ -58,6 +58,16 @@
     //     for(Object in temp1)
     // console.log(Object)
 
+    // for(Object in temp1.All.dates)
+    // console.log(Object + " " + Object.dates)
+    let count = 0
+    for(Object in temp1.All.dates){
+        count++;
+        console.log(Object + " : " + temp1.All.dates[Object])
+        if(count > 30) break;
+    }
+
+
     </script>
 
 </body>

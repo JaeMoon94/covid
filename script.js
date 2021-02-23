@@ -1,3 +1,5 @@
+// First end point for global current Cases //  
+
 const url = "https://covid-api.mmediagroup.fr/v1/cases";
         
 fetch(url)
@@ -23,7 +25,26 @@ fetch(url)
         document.getElementById("worldWideData").innerHTML = globalResult;
     });
 
+const countryHistoryUrl = "https://covid-api.mmediagroup.fr/v1/history?country=Global&status=deaths"; 
+
+fetch(countryHistoryUrl)
+    .then(function (response) {
+        return response.json();
+    }).then(function (json) {
+
+        let historicalResult = "";
+        console.log(json)
+        let count = 0
+        for(Object in json.All.dates){
+            count++;
+            // console.log(Object + " : " + json.All.dates[Object]);
+            historicalResult += Object + " : " + json.All.dates[Object] + " death" + "<br><br>";
+            if(count > 10) break;
+        }
+        document.getElementById("global_history").innerHTML = historicalResult;
+
     
+});   
 
     document.getElementById("countrySubmit").addEventListener("click", function(event) {
 
@@ -33,8 +54,11 @@ fetch(url)
 
         if (value === "")
         return;
-        console.log(value);
-        const countryUrl = "https://covid-api.mmediagroup.fr/v1//cases?country=" + value; 
+
+
+
+        // Third end point country current cases // 
+        const countryUrl = "https://covid-api.mmediagroup.fr/v1/cases?country=" + value; 
 
         fetch(countryUrl)
             .then(function (response) {
@@ -50,16 +74,23 @@ fetch(url)
                 
                 let countryResult = "";
                 
-                
-                countryResult += "<p>" + value + " Caplital: " + json.All.capital_city + "</p>";
-                countryResult += "<p>" + value + " Life expectancy: " + json.All.life_expectancy + "</p>";
-                countryResult += "<p>" + value + " Population: " + json.All.population + "</p>";
-                countryResult += "<p>" + value + " Confirmed cases: " + json.All.confirmed + "</p>";
-                countryResult += "<p>" + value + " Death by covid-19: " + json.All.deaths + "</p>";
-                countryResult += "<p>" + value + " Recovered cases: " + json.All.recovered + "</p>";
+                try{
+                    countryResult += "<p>" + value + " Caplital: " + json.All.capital_city + "</p>";
+                    countryResult += "<p>" + value + " Life expectancy: " + json.All.life_expectancy + "</p>";
+                    countryResult += "<p>" + value + " Population: " + json.All.population + "</p>";
+                    countryResult += "<p>" + value + " Confirmed cases: " + json.All.confirmed + "</p>";
+                    countryResult += "<p>" + value + " Death by covid-19: " + json.All.deaths + "</p>";
+                    countryResult += "<p>" + value + " Recovered cases: " + json.All.recovered + "</p>";
 
-                document.getElementById("countryData").innerHTML = countryResult;
+                    document.getElementById("countryData").innerHTML = countryResult;
+                }catch(error){
+                    countryResult += "Invalid input! try Again"
+                    document.getElementById("countryData").innerHTML = countryResult;
+                }
 
             });
+
+            
+
 
     });

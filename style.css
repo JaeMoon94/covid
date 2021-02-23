@@ -100,6 +100,10 @@
   {
     font-size: 17px;
   }
+  p.globalhistory
+  {
+    font-size: 17px;
+  }
 
   div.country-case
 
@@ -127,6 +131,10 @@
     {
       font-size: 20px!important;
     }
+    p.globalhistory
+    {
+      font-size: 20px!important;
+    }
   }
 
   @keyframes move{
@@ -151,6 +159,10 @@
     div.well
     {
       font-size: 20px;
+    }
+    p.globalhistory
+    {
+      font-size: 13px;
     }
   }
 
